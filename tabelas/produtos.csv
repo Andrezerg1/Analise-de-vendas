@@ -1,0 +1,7 @@
+id_produto,nome_produto,categoria,preco
+1,Notebook,Eletrônicos,3500
+2,Mouse,Eletrônicos,80
+3,Teclado,Eletrônicos,150
+4,Monitor,Eletrônicos,900
+5,Cadeira,Móveis,600
+6,Mesa,Móveis,1200
