@@ -1,0 +1,49 @@
+table 'projeto_vendas produtos'
+	lineageTag: 167f83e7-c9e6-4963-a1c5-205624ff98cc
+
+	column id_produto
+		dataType: int64
+		formatString: 0
+		lineageTag: 6634069b-06e0-45b1-a509-c915da2fcd01
+		summarizeBy: none
+		sourceColumn: id_produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome_produto
+		dataType: string
+		lineageTag: 83f8de04-38f2-453a-8432-e759477a7479
+		summarizeBy: none
+		sourceColumn: nome_produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column categoria
+		dataType: string
+		lineageTag: ff7957a9-76fe-4382-ae42-bac260f7c680
+		summarizeBy: none
+		sourceColumn: categoria
+
+		annotation SummarizationSetBy = Automatic
+
+	column preco
+		dataType: double
+		lineageTag: 6e9a24aa-fc65-4845-a870-34e43e26ae2d
+		summarizeBy: none
+		sourceColumn: preco
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'projeto_vendas produtos' = m
+		mode: import
+		source =
+				let
+				    Fonte = MySQL.Database("localhost", "projeto_vendas", [ReturnSingleDatabase=true]),
+				    projeto_vendas_produtos = Fonte{[Schema="projeto_vendas",Item="produtos"]}[Data]
+				in
+				    projeto_vendas_produtos
+
+	annotation PBI_ResultType = Table
+

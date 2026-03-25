@@ -1,0 +1,17 @@
+relationship 03f2e4ed-550a-481d-a92c-6816f01c0a05
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'projeto_vendas vendas'.data_venda
+	toColumn: LocalDateTable_967aa510-8ee9-49f3-87f7-c5e32c3ad502.Date
+
+relationship 98340abf-2131-4fb0-9ff7-cb5542f460e1
+	fromColumn: 'projeto_vendas vendas'.id_cliente
+	toColumn: 'projeto_vendas clientes'.id_cliente
+
+	annotation PBI_IsFromSource = FS
+
+relationship ab0fabb7-df45-4b4a-a394-0d133ce868b7
+	fromColumn: 'projeto_vendas vendas'.id_produto
+	toColumn: 'projeto_vendas produtos'.id_produto
+
+	annotation PBI_IsFromSource = FS
+

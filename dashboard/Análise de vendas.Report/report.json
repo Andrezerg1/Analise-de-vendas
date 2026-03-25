@@ -1,0 +1,93 @@
+{
+  "config": "{\"version\":\"5.66\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"type\":2,\"version\":{\"visual\":\"1.8.95\",\"report\":\"2.0.95\",\"page\":\"1.3.95\"}},\"customTheme\":{\"name\":\"Innovate\",\"type\":2,\"version\":{\"visual\":\"2.1.0\",\"report\":\"2.1.0\",\"page\":\"2.0.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true,\"useEnhancedTooltips\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          },
+          {
+            "name": "Innovate",
+            "path": "BuiltInThemes/Innovate.json",
+            "type": 201
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Página 1",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "a243d3625764fb9cff99",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"2365f4e1d0efa048823f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":736.6666666666667,\"y\":450,\"z\":4000,\"width\":455,\"height\":138.33333333333334,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(projeto_vendas vendas.valor_total)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"projeto_vendas vendas\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"valor_total\"}},\"Function\":1},\"Name\":\"Sum(projeto_vendas vendas.valor_total)\",\"NativeReferenceName\":\"Ticket Médio\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"valor_total\"}},\"Function\":1}}}]},\"columnProperties\":{\"Sum(projeto_vendas vendas.valor_total)\":{\"displayName\":\"Ticket Médio\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 138.33,
+          "width": 455.00,
+          "x": 736.67,
+          "y": 450.00,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"96a0df787451630dde20\",\"layouts\":[{\"id\":0,\"position\":{\"x\":736.6666666666667,\"y\":596.6666666666667,\"z\":5000,\"width\":455,\"height\":123.33333333333334,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(projeto_vendas vendas.id_venda)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"projeto_vendas vendas\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"id_venda\"}},\"Function\":5},\"Name\":\"Sum(projeto_vendas vendas.id_venda)\",\"NativeReferenceName\":\"Contagem de vendas pelo ID\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"id_venda\"}},\"Function\":5}}}]},\"columnProperties\":{\"Sum(projeto_vendas vendas.id_venda)\":{\"displayName\":\"Contagem de vendas pelo ID\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 123.33,
+          "width": 455.00,
+          "x": 736.67,
+          "y": 596.67,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"a9d2baad14366dc3ab82\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":370,\"z\":1000,\"width\":706.6666666666667,\"height\":350,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"barChart\",\"projections\":{\"Category\":[{\"queryRef\":\"projeto_vendas produtos.nome_produto\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(projeto_vendas vendas.quantidade)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"projeto_vendas produtos\",\"Type\":0},{\"Name\":\"p1\",\"Entity\":\"projeto_vendas vendas\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"nome_produto\"},\"Name\":\"projeto_vendas produtos.nome_produto\",\"NativeReferenceName\":\"nome_produto\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p1\"}},\"Property\":\"quantidade\"}},\"Function\":0},\"Name\":\"Sum(projeto_vendas vendas.quantidade)\",\"NativeReferenceName\":\"Quantidade vendida por produto\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p1\"}},\"Property\":\"quantidade\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(projeto_vendas vendas.quantidade)\":{\"displayName\":\"Quantidade vendida por produto\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 350.00,
+          "width": 706.67,
+          "x": 10.00,
+          "y": 370.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"c0d38ce00ba34c871909\",\"layouts\":[{\"id\":0,\"position\":{\"x\":548.3333333333334,\"y\":13.333333333333334,\"z\":2000,\"width\":643.3333333333334,\"height\":311.6666666666667,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"map\",\"projections\":{\"Category\":[{\"queryRef\":\"projeto_vendas clientes.cidade\",\"active\":true}],\"Size\":[{\"queryRef\":\"projeto_vendas clientes.Faturamento\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"projeto_vendas clientes\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"cidade\"},\"Name\":\"projeto_vendas clientes.cidade\",\"NativeReferenceName\":\"cidade\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Faturamento\"},\"Name\":\"projeto_vendas clientes.Faturamento\",\"NativeReferenceName\":\"Faturamento\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"Faturamento\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 311.67,
+          "width": 643.33,
+          "x": 548.33,
+          "y": 13.33,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"c959446547974bebfe59\",\"layouts\":[{\"id\":0,\"position\":{\"x\":736.6666666666667,\"y\":325,\"z\":3000,\"width\":455,\"height\":125,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"Sum(projeto_vendas vendas.valor_total)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"projeto_vendas vendas\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"valor_total\"}},\"Function\":0},\"Name\":\"Sum(projeto_vendas vendas.valor_total)\",\"NativeReferenceName\":\"Faturamento total\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"valor_total\"}},\"Function\":0}}}]},\"columnProperties\":{\"Sum(projeto_vendas vendas.valor_total)\":{\"displayName\":\"Faturamento total\"}},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 125.00,
+          "width": 455.00,
+          "x": 736.67,
+          "y": 325.00,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"f3f72d521099ba601c02\",\"layouts\":[{\"id\":0,\"position\":{\"x\":10,\"y\":0,\"z\":0,\"width\":505,\"height\":360,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"projeto_vendas vendas.data_venda.Variation.Hierarquia de datas.Ano\",\"active\":true},{\"queryRef\":\"projeto_vendas vendas.data_venda.Variation.Hierarquia de datas.Trimestre\",\"active\":true},{\"queryRef\":\"projeto_vendas vendas.data_venda.Variation.Hierarquia de datas.Mês\",\"active\":true},{\"queryRef\":\"projeto_vendas vendas.data_venda.Variation.Hierarquia de datas.Dia\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(projeto_vendas vendas.valor_total)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"projeto_vendas vendas\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"valor_total\"}},\"Function\":0},\"Name\":\"Sum(projeto_vendas vendas.valor_total)\",\"NativeReferenceName\":\"Faturamento\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"data_venda\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Ano\"},\"Name\":\"projeto_vendas vendas.data_venda.Variation.Hierarquia de datas.Ano\",\"NativeReferenceName\":\"data_venda Ano\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"data_venda\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Trimestre\"},\"Name\":\"projeto_vendas vendas.data_venda.Variation.Hierarquia de datas.Trimestre\",\"NativeReferenceName\":\"data_venda Trimestre\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"data_venda\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Mês\"},\"Name\":\"projeto_vendas vendas.data_venda.Variation.Hierarquia de datas.Mês\",\"NativeReferenceName\":\"data_venda Mês\"},{\"HierarchyLevel\":{\"Expression\":{\"Hierarchy\":{\"Expression\":{\"PropertyVariationSource\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Name\":\"Variation\",\"Property\":\"data_venda\"}},\"Hierarchy\":\"Hierarquia de datas\"}},\"Level\":\"Dia\"},\"Name\":\"projeto_vendas vendas.data_venda.Variation.Hierarquia de datas.Dia\",\"NativeReferenceName\":\"data_venda Dia\"}]},\"columnProperties\":{\"Sum(projeto_vendas vendas.valor_total)\":{\"displayName\":\"Faturamento\"}},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 360.00,
+          "width": 505.00,
+          "x": 10.00,
+          "y": 0.00,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ],
+  "theme": "Innovate"
+}

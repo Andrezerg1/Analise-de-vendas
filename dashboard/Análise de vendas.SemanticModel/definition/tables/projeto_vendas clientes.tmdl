@@ -1,0 +1,53 @@
+table 'projeto_vendas clientes'
+	lineageTag: 684330bb-4524-4637-9a25-1263ae784f7f
+
+	measure Faturamento = SUM('projeto_vendas vendas'[valor_total])
+		lineageTag: 8d8ea67c-c26c-4353-a0df-2cc7d71b8951
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total vendas' = COUNT('projeto_vendas vendas'[id_venda])
+		formatString: 0
+		lineageTag: abd5b1fb-8153-4d25-b440-c2c515ef6765
+
+	measure 'Ticket médio' = AVERAGE('projeto_vendas vendas'[valor_total])
+		lineageTag: 513047d5-4ef1-4cc4-9fdc-d167ad461152
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column id_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 7fd8f685-7e4c-4423-85bd-26d8aed28a56
+		summarizeBy: none
+		sourceColumn: id_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column nome
+		dataType: string
+		lineageTag: a366c1fe-4056-4010-8f4f-139d70f93048
+		summarizeBy: none
+		sourceColumn: nome
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: 56d5fcda-2d7d-4a83-b921-13a3ea426079
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'projeto_vendas clientes' = m
+		mode: import
+		source =
+				let
+				    Fonte = MySQL.Database("localhost", "projeto_vendas", [ReturnSingleDatabase=true]),
+				    projeto_vendas_clientes = Fonte{[Schema="projeto_vendas",Item="clientes"]}[Data]
+				in
+				    projeto_vendas_clientes
+
+	annotation PBI_ResultType = Table
+

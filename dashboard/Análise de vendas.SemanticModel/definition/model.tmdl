@@ -1,0 +1,24 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation PBI_QueryOrder = ["projeto_vendas clientes","projeto_vendas produtos","projeto_vendas vendas"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBIDesktopVersion = 2.146.1026.0 (25.08)+fb98ab832373de81dccd5c01cd96306a48477556
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'projeto_vendas clientes'
+ref table 'projeto_vendas produtos'
+ref table 'projeto_vendas vendas'
+ref table DateTableTemplate_6b712545-b71a-4fc9-9ccf-5faf0d6b78ef
+ref table LocalDateTable_967aa510-8ee9-49f3-87f7-c5e32c3ad502
+
+ref cultureInfo pt-BR
+
